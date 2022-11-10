@@ -10,6 +10,6 @@ services:
       # this env variables are required for postgres
       POSTGRES_USER: dev
       POSTGRES_PASSWORD: dev
-      POSTGRES_DB: dev
+      POSTGRES_DB: postgres
     volumes:
        - ./data:/var/lib/postgresql/data
