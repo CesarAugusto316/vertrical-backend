@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports: 
+     - 5000:5432
+    environment:
+      # this env variables are required for postgres
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: dev
+    volumes:
+       - ./data:/var/lib/postgresql/data
