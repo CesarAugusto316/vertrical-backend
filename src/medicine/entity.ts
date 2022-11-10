@@ -6,7 +6,7 @@ export class Medicine {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
+  @Column({ unique: true })
   title!: string;
 
   @Column('simple-json', { nullable: true })

@@ -15,13 +15,13 @@ const options: DataSourceOptions & SeederOptions = {
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   synchronize: false,
-  migrationsRun: true,
+  migrationsRun: false,
   logging: false,
   ssl: process.env.NODE_ENV !== 'production' ? false : true,
   entities: [Medicine],
-  migrations: process.env.NODE_ENV !== 'production' ? ['src/migrations/*.ts'] : ['dist/src/migrations/*.js'],
-  seeds: process.env.NODE_ENV !== 'production' ? ['src/seeds/*.seed.ts'] : ['dist/src/seeds/*.seed.js'],
-  factories: process.env.NODE_ENV !== 'production' ? ['src/seeds/*.factory.ts'] : ['dist/src/seeds/*.factory.js'],
+  migrations: ['src/migrations/*.ts'],
+  seeds: ['src/seeds/*.seed.ts'],
+  factories: ['src/seeds/*.factory.ts']
 };
 
 /**
