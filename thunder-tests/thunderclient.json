@@ -12,5 +12,39 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "943f89e1-99d7-499b-84e4-7094c1c06b31",
+    "colId": "f8a2b3a2-33ed-47e7-9b89-8ccad033e61a",
+    "containerId": "",
+    "name": "getAll",
+    "url": "localhost:3000/api/v1/medicines",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-11-10T15:55:11.283Z",
+    "modified": "2022-11-10T15:55:25.524Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "358b7d2b-4746-45e0-a00f-6f62748b2ef5",
+    "colId": "f8a2b3a2-33ed-47e7-9b89-8ccad033e61a",
+    "containerId": "",
+    "name": "search",
+    "url": "localhost:3000/api/v1/medicines?title=aspirina",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-11-10T16:07:34.246Z",
+    "modified": "2022-11-10T16:08:18.085Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "title",
+        "value": "aspirina",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]
