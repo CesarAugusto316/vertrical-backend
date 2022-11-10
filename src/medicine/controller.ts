@@ -13,8 +13,10 @@ export const getAll: RequestHandler = async (req, res, next) => {
     if (!medicines) {
       return next(new HttpError(404, 'not medicines found'));
     }
-    res.status(200).json(medicines);
 
+    res.status(200).json({
+      medicines
+    });
   } catch (error) {
     next(error);
   }
@@ -27,8 +29,10 @@ export const search: RequestHandler = async (req, res, next) => {
     if (!medicines) {
       return next(new HttpError(404, 'not medicines found'));
     }
-    res.status(200).json(medicines);
 
+    res.status(200).json({
+      medicines
+    });
   } catch (error) {
     next(error);
   }

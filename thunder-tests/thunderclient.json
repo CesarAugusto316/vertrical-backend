@@ -3,7 +3,7 @@
     "_id": "7468af17-bddd-4419-a1e0-1b2d9b2d929e",
     "colId": "f8a2b3a2-33ed-47e7-9b89-8ccad033e61a",
     "containerId": "",
-    "name": "search",
+    "name": "ping-pong",
     "url": "localhost:3000/api/v1",
     "method": "GET",
     "sortNum": 10000,

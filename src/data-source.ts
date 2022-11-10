@@ -15,7 +15,7 @@ const options: DataSourceOptions & SeederOptions = {
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   synchronize: false,
-  migrationsRun: false,
+  migrationsRun: true,
   logging: false,
   ssl: process.env.NODE_ENV !== 'production' ? false : true,
   entities: [Medicine],
