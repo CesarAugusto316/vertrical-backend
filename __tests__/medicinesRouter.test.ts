@@ -36,6 +36,13 @@ describe('[medicinesRouter ⚡]', () => {
     it('should return an array of medicines even if the input is empty', async () => {
       const res = await agent.get('/api/v1/medicines/search').query({ title: '' });
 
+      expect(res.statusCode).toBe(400);
+      expect(res.body.message).toBe('The query-string was not provided');
+    });
+
+    it('should return an array of medicines if the input length >= 1', async () => {
+      const res = await agent.get('/api/v1/medicines/search').query({ title: 'a' });
+
       expect(res.statusCode).toBe(200);
       expect(res.body).toHaveProperty('medicines');
       expect(res.body.medicines).toBeInstanceOf(Array<Medicine>);

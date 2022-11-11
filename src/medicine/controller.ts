@@ -27,7 +27,7 @@ export const search: RequestHandler = async (req, res, next) => {
   try {
     const { title } = req.query;
 
-    if (title === undefined || title === null) {
+    if (!title) {
       return next(new HttpError(400, 'The query-string was not provided'));
     }
 
