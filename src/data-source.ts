@@ -19,9 +19,9 @@ const options: DataSourceOptions & SeederOptions = {
   logging: false,
   ssl: process.env.NODE_ENV !== 'production' ? false : true,
   entities: [Medicine],
-  migrations: ['src/migrations/*.ts'],
-  seeds: ['src/seeds/*.seed.ts'],
-  factories: ['src/seeds/*.factory.ts']
+  migrations: process.env.NODE_ENV !== 'production' ? ['src/migrations/*.ts'] : ['dist/src/migrations/*.js'],
+  seeds: process.env.NODE_ENV !== 'production' ? ['src/seeds/*.seed.ts'] : ['dist/src/seeds/*.seed.js'],
+  factories: process.env.NODE_ENV !== 'production' ? ['src/seeds/*.factory.ts'] : ['dist/src/seeds/*.factory.js']
 };
 
 /**
