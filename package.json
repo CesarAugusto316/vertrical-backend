@@ -7,7 +7,6 @@
     "dev": "ts-node-dev --poll --respawn --transpile-only --quiet ./server.ts",
     "lint": "eslint .",
     "test:start": "jest --detectOpenHandles",
-    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "prod:build": "tsc",
     "prod:start": "NODE_ENV=production node ./dist/server.js",
@@ -18,7 +17,7 @@
     "db:up": "npm run db:drop && npm run db:create && npm run typeorm migration:run && npm run db:seed"
   },
   "keywords": [],
-  "author": "",
+  "author": "César Rivera",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
