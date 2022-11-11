@@ -1,4 +1,5 @@
 import { RequestHandler } from 'express';
+import { ILike } from 'typeorm';
 import { AppDataSource } from '../data-source';
 import { HttpError } from '../helpers/HttpError';
 import { Medicine } from './entity';
@@ -24,7 +25,17 @@ export const getAll: RequestHandler = async (req, res, next) => {
 
 export const search: RequestHandler = async (req, res, next) => {
   try {
-    const medicines = await MedicineRepo.find({ where: { title: req.params.title } });
+    const { title } = req.query;
+
+    if (title === undefined || title === null) {
+      return next(new HttpError(400, 'The query-string was not provided'));
+    }
+
+    const medicines = await MedicineRepo.find({
+      where: {
+        title: ILike(`%${title}%`)
+      }
+    });
 
     if (!medicines) {
       return next(new HttpError(404, 'not medicines found'));

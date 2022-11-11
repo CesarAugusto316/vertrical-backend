@@ -16,10 +16,14 @@
 
 <br>
 
-## Install
+## Quick Start
 
 ```sh
+git clone <this_repo_url>
 npm install
+docker compose up # or use postgres if you have it installed
+npm run db:up # resets db & runs migrations & seeders
+npm run dev
 ```
 
 ## Run tests
@@ -52,6 +56,25 @@ docker compose down
   npm run typeorm migration:revert # reverts all migrations
   npm run typeorm -d <your-data-source-path> migration:{run|revert} # runs or reverts migration by file
 ```
+
+## Thunder-Client
+
+Install thunder-client vscode extension to save the collections into our workspace.
+
+```bash
+  ctrl + shift + p
+```
+
+Open Preferences: User Settings (JSON) vscode command palette and insert
+into settings.json:
+
+```json
+{ "thunder-client.saveToWorkspace": true }
+```
+
+Then you can visualise the folder thunder-tests to test the endpoints and save any change or test.
+
+<br>
 
 ## Author
 
