@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --poll --respawn --transpile-only --quiet ./server.ts",
     "lint": "eslint .",
     "test:start": "jest --detectOpenHandles",
-    "test:watch": "jest --watchAll",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "prod:build": "tsc",
     "prod:start": "NODE_ENV=production node ./dist/server.js",
