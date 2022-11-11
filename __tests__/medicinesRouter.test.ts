@@ -16,7 +16,7 @@ describe('[medicinesRouter ⚡]', () => {
   const agent = supertest.agent(app);
 
   describe('GET /medicines/', () => {
-    it('should responds with an array that has an Medicine Interface', async () => {
+    it('should responds with an array of medicines', async () => {
       const res = await agent.get('/api/v1/medicines');
 
       expect(res.statusCode).toBe(200);
