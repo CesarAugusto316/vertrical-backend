@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm i
-      - run: npm run dev:lint
+      - run: npm run lint
 
   testing:
     name: Testing the code
