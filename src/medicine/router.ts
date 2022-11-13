@@ -6,4 +6,4 @@ export const medicinesRouter = Router();
 
 medicinesRouter.route('/').get(getAll);
 medicinesRouter.route('/:id').get(getByID);
-medicinesRouter.route('/search').get(search);
+medicinesRouter.route('/search').post(search);
