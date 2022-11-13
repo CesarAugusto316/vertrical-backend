@@ -25,6 +25,20 @@ describe('[medicinesRouter ⚡]', () => {
     });
   });
 
+  describe('GET /medicines/:id', () => {
+    it('should responds with a medicine', async () => {
+      const res = await agent.get('/api/v1/medicines/4');
+
+      expect(res.statusCode).toBe(200);
+      expect(res.body).toHaveProperty('medicine');
+      expect(res.body.medicine).toHaveProperty('id');
+      expect(res.body.medicine).toHaveProperty('photo');
+      expect(res.body.medicine).toHaveProperty('title');
+      expect(res.body.medicine).toHaveProperty('description');
+      expect(res.body.medicine).toHaveProperty('shortDescription');
+    });
+  });
+
   describe('GET /medicines/search', () => {
     it('should fail if query-string is missing', async () => {
       const res = await agent.get('/api/v1/medicines/search').query({ title: undefined });

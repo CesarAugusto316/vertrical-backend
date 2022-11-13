@@ -32,5 +32,19 @@
       }
     ],
     "tests": []
+  },
+  {
+    "_id": "b00d0eea-c35d-4ac5-aeac-b3ce70b6096a",
+    "colId": "f8a2b3a2-33ed-47e7-9b89-8ccad033e61a",
+    "containerId": "",
+    "name": "getById",
+    "url": "localhost:3000/api/v1/medicines/11",
+    "method": "GET",
+    "sortNum": 25000,
+    "created": "2022-11-13T02:49:16.049Z",
+    "modified": "2022-11-13T02:50:45.949Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]

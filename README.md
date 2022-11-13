@@ -8,6 +8,8 @@
 
 > backend for vertrical search engine challenge
 
+## ✨ [Front-end Repository](https://github.com/CesarAugusto316/vertrical_engine_frontend)
+
 <br>
 
 > IMPORTANT:
