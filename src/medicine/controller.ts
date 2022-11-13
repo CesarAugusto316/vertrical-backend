@@ -23,6 +23,28 @@ export const getAll: RequestHandler = async (req, res, next) => {
   }
 };
 
+export const getByID: RequestHandler = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    if (!id) {
+      return next(new HttpError(400, 'id must be provided'));
+    }
+
+    const medicine = await MedicineRepo.findOneBy({ id: Number(id) });
+
+    if (!medicine) {
+      return next(new HttpError(404, 'not medicines found'));
+    }
+
+    res.status(200).json({
+      medicine
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const search: RequestHandler = async (req, res, next) => {
   try {
     const { title } = req.query;
